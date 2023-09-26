@@ -1,4 +1,4 @@
-# Mini Project 4: Matrix Testing
+# IDS706 Mini Project 4: Matrix Testing
 
 ### Description: 
 The matrix testing was executed through the `python_matrix.yml` YAML file located in the `.github/workflows` directory. Below, you can find a glimpse of the YAML configuration. This matrix testing was established as a building strategy, incorporating both Python versions and operating system options within the "matrix" section of the "strategy." Python versions 3.8, 3.9, and 3.11 were all subjected to thorough validation.
