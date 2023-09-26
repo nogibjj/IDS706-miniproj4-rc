@@ -9,14 +9,14 @@ The matrix testing was executed through the `python_matrix.yml` YAML file locate
 ***
 
 
+### Overview of the files in the project:
+
+In a file located at `.github/workflows/.ymlFiles`, development environments are configured with various Python versions to be used in subsequent actions. These actions are initiated when changes are pushed or pulled into the main branch. Once the environment is established, a sequence of actions, including package installation, linting, testing, and formatting, is executed in the order specified within the Makefile. Here is an example code block demonstrating the setup of Python versions in a file.
+
+
 ```python
 name: "Python Version: 3.8, 3.9, 3.11  "
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ] 
-  workflow_dispatch:
+
 jobs:
   build:
     strategy:
@@ -33,16 +33,5 @@ jobs:
         uses: actions/setup-python@v1
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Install
-        run: |
-          make install
-      - name: Format
-        run: |
-          make format
-      - name: Pylint
-        run: |
-          make lint
-      - name: Unit Tests
-        run: |
-          make test
+
 ```
