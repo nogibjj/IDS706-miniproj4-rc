@@ -7,9 +7,11 @@ The matrix testing was executed through the `python_matrix.yml` YAML file locate
 ### Github Actions:
 [![Python Version: 3.8, 3.9, 3.11](https://github.com/nogibjj/mjh140-MiniProject4/actions/workflows/python_matrix.yml/badge.svg)](https://github.com/nogibjj/mjh140-MiniProject4/actions/workflows/python_matrix.yml)   [![Install](https://github.com/nogibjj/mjh140-MiniProject4/actions/workflows/install.yml/badge.svg)](https://github.com/nogibjj/mjh140-MiniProject4/actions/workflows/install.yml)   [![Format](https://github.com/nogibjj/mjh140-MiniProject4/actions/workflows/format.yml/badge.svg)](https://github.com/nogibjj/mjh140-MiniProject4/actions/workflows/format.yml)   [![Linting](https://github.com/nogibjj/mjh140-MiniProject4/actions/workflows/lint.yml/badge.svg)](https://github.com/nogibjj/mjh140-MiniProject4/actions/workflows/lint.yml)   [![Unit Tests](https://github.com/nogibjj/mjh140-MiniProject4/actions/workflows/unitTests.yml/badge.svg)](https://github.com/nogibjj/mjh140-MiniProject4/actions/workflows/unitTests.yml)
 ***
+### Preperation:
 
+open codespaces and wait for container to be built with requiremnts.txt installed
 
-### Overview of the files in the project:
+### Overview and Check 
 
 In a file located at `.github/workflows/.ymlFiles`, development environments are configured with various Python versions to be used in subsequent actions. These actions are initiated when changes are pushed or pulled into the main branch. Once the environment is established, a sequence of actions, including package installation, linting, testing, and formatting, is executed in the order specified within the Makefile. Here is an example code block demonstrating the setup of Python versions in a file.
 
@@ -35,3 +37,11 @@ jobs:
           python-version: ${{ matrix.python-version }}
 
 ```
+
+Format code ```make format```
+
+Lint code ```make lint```
+
+Test code ```make test```
+
+
